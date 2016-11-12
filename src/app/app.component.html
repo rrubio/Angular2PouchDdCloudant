@@ -1,0 +1,46 @@
+<div class="jumbotron">
+<div class="container">
+
+  <h1 class="display-3">Todo List - Angular 2 + NoSQL</h1>
+  <p>This todo list example coupled with PouchDB & Cloudant demonstrate the ability for a fullstack APP and rapid development in combination with bootstrap.</p>
+  <p>NOTE: PouchDB will also work in the same manner with Couchbase and CouchDB.</p>
+  <p>
+    <a class="btn btn-primary btn-lg" href="https://pouchdb.com/" target="_new" role="button">PouchDB</a>
+    &nbsp; + &nbsp; 
+    <a class="btn btn-primary btn-lg" href="https://cloudant.com/" target="_new">Cloudant</a>
+    &nbsp; or &nbsp;
+    <a class="btn btn-primary btn-lg" href="http://blog.couchbase.com/2016/october/pokemon-go-scaling-profile-services-with-couchbase--nosql?utm_source=hp_banner&utm_medium=website&utm_content=english&utm_campaign=pokemon&utm_keyword=blog" target="_new" role="button">CouchBase</a>
+    &nbsp; or &nbsp;
+    <a class="btn btn-primary btn-lg" href="http://couchdb.apache.org/" target="_new" role="button">CouchDB</a>
+  </p>
+
+</div>
+</div>
+
+<div class="container">
+  <div class="row">&nbsp;</div>
+  
+  <form class="form-inline" [formGroup]="form" (submit)="addData($event)">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group" formGroupName="name">
+          <input class="form-control col-sm-10 " formControlName="testEvent" type="text" placeholder="Enter new value">
+        </div>
+        <button class="btn btn-primary">Todo</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">&nbsp;</div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let message of messages">
+
+      <button type="button" class="close" aria-label="Close" (click)="deleteToDo(message)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {{ message.moreandmore }}
+    </li>
+  </ul>
+
+</div>
