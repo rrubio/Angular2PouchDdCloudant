@@ -1,3 +1,21 @@
+# Installing PouchDb
+
+1. npm install pouchdb --save
+2. npm install -g typings
+3. typings install --global --save dt~pouchdb dt~pouchdb-adapter-websql dt~pouchdb-browser dt~pouchdb-core dt~pouchdb-http dt~pouchdb-mapreduce dt~pouchdb-node dt~pouchdb-replication
+
+# Modify angular-cli.json
+
+`
+"packages": [
+{
+  "PouchDB": {
+    "main": "pouchdb.js",
+    "defaultExtension": "js"
+  }      
+}
+`
+
 # AngularCli
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
